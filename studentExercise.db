@@ -1,0 +1,45 @@
+DROP TABLE IF EXISTS Cohort;
+DROP TABLE IF EXISTS Student;
+
+CREATE TABLE Cohort (
+    CohortId	   INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    Name   TEXT NOT NULL UNIQUE
+);
+
+
+INSERT INTO Cohort ( Name)
+VALUES ( "Cohort 36");
+
+INSERT INTO Cohort (Name)
+VALUES ("Cohort 29");
+
+
+
+CREATE TABLE 'Student' (
+	'StudentId'	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	'First Name'	TEXT NOT NULL UNIQUE,
+	'Last Name' 	TEXT NOT NULL UNIQUE,
+	'Slack handle' 	TEXT NOT NULL UNIQUE,
+	'CohortId'		INTEGER,
+	FOREIGN KEY('CohortId') REFERENCES 'Cohort'('CohortId')
+	);	
+	
+INSERT INTO Student
+SELECT null, 'Jake From', 'StateFarm', 'statefarm_jake@nss.com', CohortId
+FROM Cohort
+WHERE Name = 'Cohort 36';
+
+INSERT INTO Student
+SELECT null, 'BatMan', 'And Robin', 'batmandandrobin@nss.com', CohortId
+FROM Cohort
+WHERE Name = 'Cohort 36';
+
+INSERT INTO Student
+SELECT null, 'Carl', 'Winslow', 'familymatters@nss.com', CohortId
+FROM Cohort
+WHERE Name = 'Cohort 29';
+
+INSERT INTO Student
+SELECT null, 'Bugz', 'Bunny', 'loneytoons@nss.com', CohortId
+FROM Cohort
+WHERE Name = 'Cohort 29';
