@@ -62,3 +62,23 @@ VALUES('Lebron', 'James', 'goatjames@nss.com', 'Cohort 36', 'Basketball');
 
 INSERT INTO INSTRUCTOR ('First Name', 'last Name', 'Slack Handle', 'Instruct Cohort', 'Instruct Special')
 VALUES('Dave', 'Thomas', 'wendys@nss.com', 'Cohort 29', 'Cooking');
+
+
+CREATE TABLE 'Exercise' (
+'ExerciseId'	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+'Name of Exercise'	TEXT NOT NULL,
+'Language of Exercise'	TEXT NOT NULL
+);
+
+INSERT INTO Exercise('Name of Exercise', 'Language of Exercise')
+VALUES('Welcome to Nashville', 'JavaScript');
+
+INSERT INTO Exercise('Name of Exercise', 'Language of Exercise')
+VALUES('NutShell', 'React');
+
+INSERT INTO Exercise('Name of Exercise', 'Language of Exercise')
+VALUES('Keahua', 'Python');
+
+
+INSERT INTO Exercise('Name of Exercise', 'Language of Exercise')
+VALUES('Student Exercise', 'SQL');
