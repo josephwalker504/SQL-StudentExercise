@@ -43,3 +43,22 @@ INSERT INTO Student
 SELECT null, 'Bugz', 'Bunny', 'loneytoons@nss.com', CohortId
 FROM Cohort
 WHERE Name = 'Cohort 29';
+
+
+CREATE TABLE 'INSTRUCTOR' (
+'InstructorID'	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+'First Name'	TEXT NOT NULL,
+'last Name'		TEXT NOT NULL,
+'Slack Handle'	TEXT NOT NULL,
+'Instruct Cohort'    TEXT NOT NULL,
+'Instruct Special'	 TEXT NOT NULL
+);
+
+INSERT INTO INSTRUCTOR ('First Name', 'last Name', 'Slack Handle', 'Instruct Cohort', 'Instruct Special')
+VALUES( 'Johnny', 'Depp', 'j.depp@nss.com', 'Cohort 36', 'Impersonation');
+
+INSERT INTO INSTRUCTOR ('First Name', 'last Name', 'Slack Handle', 'Instruct Cohort', 'Instruct Special')
+VALUES('Lebron', 'James', 'goatjames@nss.com', 'Cohort 36', 'Basketball');
+
+INSERT INTO INSTRUCTOR ('First Name', 'last Name', 'Slack Handle', 'Instruct Cohort', 'Instruct Special')
+VALUES('Dave', 'Thomas', 'wendys@nss.com', 'Cohort 29', 'Cooking');
